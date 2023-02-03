@@ -1,6 +1,6 @@
 # Medplum OAuth Demo
 
-This is a demonstration of how to use Medplum as an OAuth2 Authorization Server.
+This is a demonstration of how to use Medplum with an External Auth Provider or "Federated Identities".
 
 This repo is similar to [medplum-oauth-demo](https://github.com/medplum/medplum-oauth-demo), except that is uses `@medplum/core` and `MedplumClient`.
 
