@@ -2,22 +2,28 @@
 
 This is a demonstration of how to use Medplum with an External Auth Provider or "Federated Identities".
 
-This repo is similar to [medplum-oauth-demo](https://github.com/medplum/medplum-oauth-demo), except that is uses `@medplum/core` and `MedplumClient`.
+This repo is similar to [medplum-client-oauth-demo](https://github.com/medplum/medplum-client-oauth-demo), except that is uses an external identity provider.
 
-It demonstrates:
-
-- How to call the [/oauth2/authorize endpoint](https://docs.medplum.com/api/oauth/authorize) to initiate the authorization flow
-- How to call the [/oauth2/token endpoint](https://docs.medplum.com/api/oauth/token) to exchange a code for an access token
-- How to call the [/oauth2/userinfo endpoint](https://docs.medplum.com/api/oauth/userinfo) to retrive the current user details
-- How to call the Medplum FHIR API with the access token
+![image](https://user-images.githubusercontent.com/749094/216679854-c09c752d-df7d-46b4-9aa9-1f2a10f82406.png)
 
 ## Setup
 
-Setup your account:
+Setup your external authentication provider (Auth0, AWS Cognito, Okta, etc).  Use "https://api.medplum.com/auth/external" as the "redirect URI". Note the following details:
+
+- Authorize URL
+- Token URL
+- UserInfo URL
+- Client ID
+- Client secret
+
+Setup your Medplum account:
 
 - [Register for a Medplum account](https://docs.medplum.com/tutorials/app/register)
 - Create a `ClientApplication`
 - Set the "Redirect URI" to "http://localhost:8000/"
+- Add an external identity provider with the details from above
+
+Update the values in `src/main.ts` accordingly.
 
 Now you can run this demo:
 
