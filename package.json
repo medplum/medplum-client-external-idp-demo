@@ -1,20 +1,21 @@
 {
-  "name": "medplum-client-oauth-demo",
+  "name": "medplum-client-external-idp-demo",
+  "version": "3.0.11",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "dev": "vite",
     "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@medplum/core": "^2.0.31",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.1"
   },
   "prettier": {
     "printWidth": 100,
     "singleQuote": true
+  },
+  "devDependencies": {
+    "@medplum/core": "3.0.11",
+    "rimraf": "5.0.5",
+    "typescript": "5.4.2",
+    "vite": "5.1.6"
   }
 }
